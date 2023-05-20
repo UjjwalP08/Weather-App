@@ -1,0 +1,132 @@
+*{
+    /* Reset The CSS */
+    margin: 0px;
+    padding: 0px;
+}
+
+nav .heading{
+    background-color: gold;
+    width: 100%;
+    height: 50px;
+}
+
+nav .heading h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.sec_1{
+    width: 100%;
+    height: 25vh;
+    /* background-color:red; */
+    /* text-align: center; */
+}
+
+.sec_1 label {
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+    left: 540px;
+}
+
+.sec_1 form select{
+    display: block;
+    margin: auto;
+    /* background-color: bisque; */
+    width:200px;
+    border-radius: 5px;
+    outline: none;     
+    padding: 5px;
+}
+.sec_1 form .cityList{
+    /* background-color: blue; */
+    margin-top: 25px;
+}
+.sec_1 form .countryList{
+    margin-top: 10px;
+}
+
+/* OutPut Section */
+
+.extra{
+    display: none;
+}
+
+.sec_2 .output{
+    height: 40vh;
+    background-color: aquamarine;
+    width: 35%;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+
+
+.sec_2 .output .picture img{
+    display: inline-block;
+    margin: auto;
+    width: auto;
+    height: 190px;
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+
+.sec_2 .output .sec_2_info{
+    position: relative;
+    left: 15%;
+    margin-top: 40px;
+}
+.sec_2 .output .sec_2_info .temp{
+    font-size: 3rem;
+    padding: 10px;
+}
+.sec_2 .output .sec_2_info .desc{
+    font-size: 2rem;
+    padding: 10px;
+}
+.sec_2 .output .sec_2_info .days{
+    font-size: 1rem;
+    padding: 5px;
+}
+
+/* Spinner */
+.loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    top: 40%;
+    left: 45%;
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    border-color: #FF3D00;
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }

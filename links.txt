@@ -1,0 +1,1 @@
+https://openweathermap.org/img/w/${icon_id}.png
